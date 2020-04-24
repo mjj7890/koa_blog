@@ -1,0 +1,80 @@
+<style>
+  .author {
+    box-sizing: border-box;
+    width: 70%;
+    padding: 0 24px 24px 24px;
+    min-height: 80vh;
+    margin: 64px auto 32px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 6px;
+  }
+
+  .item {
+    width: 100%;
+    padding: 32px 0;
+    text-align: center;
+    background: white;
+  }
+
+  .about-logo {
+    width: 180px;
+    margin: 16px auto;
+  }
+
+  .about-logo img {
+    width: 100%;
+  }
+
+  .text {
+    font-size: 14px;
+    color: #666;
+    text-indent: 2em;
+  }
+
+  .text a {
+    color: #2d8cf0;
+  }
+
+  .content {
+    padding-top: 32px;
+  }
+
+  .end {
+    line-height: 42px;
+    font-size: 14px;
+    color: #666;
+    text-indent: 2em;
+  }
+
+  @media screen and (min-width: 200px) and (max-width: 750px) {
+    .author {
+      padding: 0 24px;
+      width: 100%;
+    }
+  }
+</style>
+<section class="author">
+  <article class="item">
+    <h1 class="about-logo">
+      <img src="images/logo.png" alt="logo">
+    </h1>
+  </article>
+  <article class="text">
+    <p>
+      Hello，大家好，我是小马哥，本课程是基于vue+nodejs+koa2+mongodb开发的个人博客网站。
+      <h4>希望喜欢的老铁来波👍和关注</h4>
+    </p>
+    <p class="content">博客的内容：积极向上的文章。</p>
+    <p>博客的愿景：和更多的朋友一起学习进步。</p>
+    <p>博客的风格：简约至上。</p>
+  </article>
+  <article class="end">
+    <p>最后，祝大家每天开心，每天幸福！</p>
+  </article>
+</section>
+<div id="back-to-top-page">
+  <span class="glyphicon glyphicon-menu-up"></span>
+  <span>TOP</span>
+</div>
+{{>footer}}

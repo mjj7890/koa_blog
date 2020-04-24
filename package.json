@@ -1,0 +1,38 @@
+{
+  "name": "koa-blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "bcrypt": "^4.0.1",
+    "debug": "~2.6.8",
+    "handlebars-helpers": "^0.10.0",
+    "hbs": "~4.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-bouncer": "^6.0.4",
+    "koa-convert": "^1.2.0",
+    "koa-hbs": "^1.0.0",
+    "koa-json": "^2.0.2",
+    "koa-jwt": "^3.6.0",
+    "koa-logger": "^3.0.0",
+    "koa-onerror": "^3.1.0",
+    "koa-router": "^7.2.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^6.0.2",
+    "koa2-cors": "^2.0.6",
+    "lin-mizar": "^0.3.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.5",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.1.1",
+    "eslint": "3.18.0",
+    "handlebars": "^4.5.0"
+  }
+}

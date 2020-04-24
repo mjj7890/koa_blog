@@ -1,0 +1,72 @@
+<article class="article-detail">
+  {{>sidebar}}
+  <article class="article-list" id="article">
+    <header class="article-list-header">
+      <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>文章
+    </header>
+    {{#if article}}
+    <ul class="article-list-box">
+      {{#each article}}
+        <li class="article-list-box-inner">
+          <a class="article-list-item" href="/article/detail/{{_id}}">
+            <div class="article-list-content">
+              <h1 class="article-list-title">
+                {{!-- 标题 --}}
+                {{title}}
+              </h1>
+              <div class="article-list-description">
+                {{!-- 文章描述 --}}
+                {{description}}
+              </div>
+              <div class="article-list-info">
+
+                {{!-- 分类 --}}
+                {{#if category_id}}
+                  <p class="article-list-category">
+                    <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+                    {{category_id.name}}
+                  </p>
+                {{/if}}
+               
+
+                <p class="article-list-author">
+                  <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                  {{author}}
+                </p>
+                <p class="article-list-browse">
+                  <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                  {{browse}}
+                </p>
+              </div>
+            </div>
+            <div class="article-list-cover-box">
+              <div class="article-list-cover-inner">
+                <img class="article-list-cover-img" src="{{cover}}">
+              </div>
+            </div>
+          </a>
+        </li>
+      {{/each}}
+
+    </ul>
+    {{else}}
+      <ul class="article-list-empty">暂无文章</ul>
+    {{/if}}
+
+
+  </article>
+
+
+  <div id="back-to-top-page">
+    <span class="glyphicon glyphicon-menu-up"></span>
+    <span>TOP</span>
+  </div>
+
+  {{#contentFor 'jquery'}}
+  <script src='/js/comment.js'>
+
+  </script>
+  <script src='/js/common.js'>
+
+  </script>
+  {{/contentFor}}

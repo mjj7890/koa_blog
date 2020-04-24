@@ -1,0 +1,51 @@
+<article class="sidebar-container-visibility"></article>
+<article class="sidebar-container-fixed">
+  {{#if advertise}}
+      <div class="sidebar-box recommend-box">
+        <header class="sidebar-header">
+          <span class="glyphicon glyphicon glyphicon-th-large" aria-hidden="true"></span>
+          推荐
+        </header>
+        <div class="list-group" style="margin: 0">
+          {{#each advertise }}
+            <a href="{{link}}" target="_blank" class="list-group-item list-group-item-border">
+              {{title}}
+            </a>
+          {{/each}}
+          
+        </div>
+      </div>
+  {{/if}}
+  
+
+  {{#if category}}
+    <div class="sidebar-box">
+      <header class="sidebar-header">
+        <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+        分类
+      </header>
+      <ul class="sidebar-box-content">
+        <li class="sidebar-box-category">
+          <a href="/">
+            <button type="button" class="btn btn-default btn-primary btn-xs btn-margin-bottom">
+              <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+              全部
+            </button>
+          </a>
+          {{#each category}}
+            <a href="/?category_id=<%= cate.id %>">
+              <button type="button" class="btn btn-default btn-primary btn-xs btn-margin-bottom">
+                <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+                {{name}}
+              </button>
+            </a>
+          {{/each}}
+        </li>
+      </ul>
+    </div>
+  {{/if}}
+  
+  
+
+
+</article>

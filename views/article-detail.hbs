@@ -1,0 +1,52 @@
+<article class="article-detail">
+  {{>sidebar}}
+  <article class="article-detail-container">
+    <div class="article-detail-header">
+      <h1 class="article-detail-title">
+        {{article.title}}
+      </h1>
+      <ul class="article-detail-intro">
+        {{#if category}}
+          <li class="articles-detail-item-category">
+            <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+            <a href={{category.link}}>{{category.name}}</a>
+          </li>
+        {{/if}}
+        <li>
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          {{article.author}}
+        </li>
+        <li>
+          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+          {{article.browse}}
+        </li>
+        {{#if commentList}}
+          <li>
+            <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+            {{commentList.length}}
+          </li>
+        {{/if}}
+      
+      </ul>
+    </div>
+    <div>
+      {{article.content}}
+      <input type="hidden" id="article-hidden-id" value={{article._id}}>
+    </div>
+    {{!-- 评论区 --}}
+    {{>comment}}
+   
+  </article>
+</article>
+
+
+<div id="back-to-top-page">
+  <span class="glyphicon glyphicon-menu-up"></span>
+  <span>TOP</span>
+</div>
+
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
